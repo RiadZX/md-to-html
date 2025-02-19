@@ -1,6 +1,7 @@
 use std::fs::{self, File};
 use std::io::{self, Read};
 use std::path::Path;
+mod themes;
 
 pub struct MarkdownConverter{
     theme: String,
@@ -46,8 +47,7 @@ impl<'a> MarkdownConverter {
     }
 
     fn read_theme(&self) -> io::Result<String> {
-        let theme_path = format!("src/themes/{}.css", self.theme);
-        fs::read_to_string(theme_path)
+        Ok(themes::get_theme(&self.theme).to_string())
     }
 
     fn read_file<P: AsRef<Path>>(&self, path: P) -> io::Result<String> {
