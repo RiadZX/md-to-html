@@ -6,11 +6,7 @@ A command-line tool that converts Markdown files to styled HTML documents with s
 
 - Convert Markdown files to HTML
 - Multiple theme support (default, dark, and light)
-- Syntax highlighting for code blocks
 - Responsive design
-- Table support
-- Image handling
-- Blockquote styling
 
 ## Installation
 
